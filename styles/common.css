@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* fonts */
+/* Pretentard, Roboto Flex */
+
+/* Pretendard */
+@import url(../assets/fonts/pretendard.css);
+
+/* Roboto Flex */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+
+/* css 변수 */
+:root {
+    --font-pc-ko:'Pretendard',"Noto Sans",-apple-system, BlinkMacSystemFont, "Helvetica Neue","Apple SD Gothic Neo", Arial, sans-serif;
+    --font-pc-en:"Roboto Flex","MangoGrotesque","Azeret Mono",-apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+
+    --font-bold: 700;
+    --font-semibold: 600;
+    --font-regular: 400;
+    --font-medium: 500;
+}
