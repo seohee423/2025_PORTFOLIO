@@ -3,7 +3,12 @@ https://seohee423.github.io/2025_PORTFOLIO/
 
 ----
 
-## 250415
+## 250520 - 250521
+#### html
+- 메인, about 페이지 html 구조 작성
+- 프로젝트 상세페이지 오트밀스튜디오 html 구조 작성
+
+## 250515
 #### html&css
 - 페이지별 이미지, 영상 폴더에 정리
 - 폰트 common.css에 연결
