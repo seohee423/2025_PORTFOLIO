@@ -3,3 +3,8 @@
 body {
   font-family: 'pretendard';
 }
+
+header {
+  display: none
+  ;
+}
