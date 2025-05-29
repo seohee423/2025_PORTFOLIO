@@ -3,9 +3,18 @@ https://seohee423.github.io/2025_PORTFOLIO/
 
 ----
 
+## 250529 - 
+#### css
+- 메인 페이지 모바일, PC css 작업
+
+## 250528
+#### css
+- 프로젝트 상세페이지 PC 버전 css 작업 완료
+- global.css에 모바일, PC버전 header, footer 작업
+
 ## 250526 - 250527
 #### css
-- 프로젝트 상세페이지 모바일 버전 css 작업 완료료
+- 프로젝트 상세페이지 모바일 버전 css 작업 완료
 - 진행 과정 점선 구현: position값과 before, after 활용하여 적용
 - problems&solution 영역 이미지 정렬 : width %값을 조절하여 정렬
 

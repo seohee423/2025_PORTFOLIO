@@ -87,7 +87,8 @@
         <li>리디자인&퍼블리싱</li>
       </ul>
       <video class="project-video" src=""></video>
-      <p class="project-txt">경기도박물관은 1996년 용인시에 설립된 도립 박물관입니다. <br>모던하고 트렌디한 디자인과 다양한 동적 이벤트를 통해 <br>전시, 공간 정보, 문화 프로그램 및 일정 등의 콘텐츠를 효과적으로 전달합니다.</p>
+      <p class="project-txt">경기도박물관은 1996년 용인시에 설립된 도립 박물관입니다. <br>모던하고 트렌디한 디자인과 다양한 동적 이벤트를 통해 <br>전시, 공간 정보, 문화 프로그램
+        및 일정 등의 콘텐츠를 효과적으로 전달합니다.</p>
     </section>
 
     <!------ goals  ------>
@@ -166,25 +167,27 @@
     <!------ publishing  ------>
     <section class="publishing">
       <h3 class="works-title">Publishing</h3>
-      <!-- css -->
-      <div class="css">
-        <h5>CSS</h5>
-        <ul>
-          <li>flex, position, grid를 활용한 레이아웃 구성</li>
-          <li>object-fit으로 이미지 크기와 비율 조정</li>
-          <li>hover, ::before, filter 등으로 애니메이션 효과 적용</li>
-          <li>transition을 사용해 자연스러운 움직임 구현</li>
-        </ul>
-      </div>
-      <!-- js -->
-      <div class="js">
-        <h5>JavaScript/jQuery</h5>
-        <ul>
-          <li>css 와 javascript로 cursor 이벤트 적용</li>
-          <li>scrollY 속성으로 특정 요소 색상 변경</li>
-          <li>offsetTop, scrollY 속성을 이용한 비디오 사이즈 확대 스크롤 이벤트</li>
-          <li>querySelectorAll, setInterval으로 이미지 슬라이드 쇼 구현</li>
-        </ul>
+      <div class="publishing-wrapper">
+        <!-- css -->
+        <div class="css">
+          <h5>CSS</h5>
+          <ul>
+            <li>flex, position, grid를 활용한 레이아웃 구성</li>
+            <li>object-fit으로 이미지 크기와 비율 조정</li>
+            <li>hover, ::before, filter 등으로 애니메이션 효과 적용</li>
+            <li>transition을 사용해 자연스러운 움직임 구현</li>
+          </ul>
+        </div>
+        <!-- js -->
+        <div class="js">
+          <h5>JavaScript/jQuery</h5>
+          <ul>
+            <li>css 와 javascript로 cursor 이벤트 적용</li>
+            <li>scrollY 속성으로 특정 요소 색상 변경</li>
+            <li>offsetTop, scrollY 속성을 이용한 비디오 사이즈 확대 스크롤 이벤트</li>
+            <li>querySelectorAll, setInterval으로 이미지 슬라이드 쇼 구현</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -214,10 +217,11 @@
       <!-- problem 3 -->
       <div class="ps-con">
         <h5>메인 영상에 요소들이 가려져 보이지 않을 때</h5>
-        <p>video, logo, header 등 main 페이지의 요소가 순서대로 정리되지 않아 서로 가려 보이는 문제 발생</p>
-        <p>▶ z-index로 해결</p>
-        <img src="./assets/images/works/museum/problem2-1.png" alt="">
-        <img src="./assets/images/works/museum/problem2-2.png" alt="">
+        <p>video, logo, header 등 main 페이지의 요소가 순서대로 정리되지 않아 서로 가려 보이는 문제 발생<br>▶ z-index로 해결</p>
+        <div class="ps-img">
+          <img src="./assets/images/works/museum/problem2-1.png" alt="">
+          <img src="./assets/images/works/museum/problem2-2.png" alt="">
+        </div>
       </div>
       <!-- problem 4 -->
       <div class="ps-con">
@@ -234,8 +238,10 @@
             <p>스크립트에 if문과 scrollY를 사용해 스크롤이 최상단을 벗어나면 .on이 활성화되도록 구현</p>
           </li>
         </ul>
-        <img src="./assets/images/works/museum/problem3-1.png" alt="">
-        <img src="./assets/images/works/museum/problem3-2.png" alt="">
+        <div class="ps-img">
+          <img src="./assets/images/works/museum/problem3-1.png" alt="">
+          <img src="./assets/images/works/museum/problem3-2.png" alt="">
+        </div>
       </div>
       <!-- problem 5 -->
       <div class="ps-con">

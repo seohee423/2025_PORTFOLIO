@@ -14,8 +14,6 @@
   object-fit: contain;
 }
 
-.project-txt {}
-
 .project-txt h4 {
   font-size: 20px;
   font-weight: 600;
@@ -45,10 +43,6 @@
 }
 
 /* prototype */
-.prototype {}
-
-.prototype .works-title {}
-
 .prototype .prototype-img {
   width: 100%;
   display: flex;
@@ -80,9 +74,9 @@
   font-weight: 400;
   color: #111;
   background-color: #fff;
-  width: 130px;
+  width: 140px;
   height: 35px;
-  line-height: 33px;
+  line-height: 35px;
   text-align: center;
   border-radius: 20px;
   text-transform: uppercase;

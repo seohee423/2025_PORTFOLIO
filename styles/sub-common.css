@@ -25,6 +25,7 @@ main {
   font-weight: 700;
   text-align: center;
   margin-bottom: 55px;
+  font-family: 'Roboto Flex';
 }
 
 .project-info {
@@ -63,6 +64,11 @@ section {
   font-family: 'Roboto Flex';
   font-weight: 700;
   margin-bottom: 25px;
+}
+
+a {
+  font-family: 'Roboto Flex';
+  font-weight: 300;
 }
 
 /* 개인프로젝트 - goals */
@@ -363,14 +369,17 @@ section {
 
 /* problems&solutions */
 .ps {}
+
 .ps .ps-con {
   margin-bottom: 50px;
 }
+
 .ps .ps-con h5 {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
 }
+
 .ps .ps-con p {
   width: calc(100% - 30px);
   font-size: 14px;
@@ -381,7 +390,7 @@ section {
 }
 
 .ps .ps-con p:after {
-    content: "";
+  content: "";
   position: absolute;
   left: -18px;
   top: 20px;
@@ -406,6 +415,7 @@ section {
 }
 
 .result h5 {
+  font-family: 'Roboto Flex';
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -478,17 +488,298 @@ section {
 
 .link .link-btn li a {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   color: #111;
   background-color: #fff;
   width: 130px;
   height: 35px;
-  line-height: 33px;
+  line-height: 35px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 15px;
   text-transform: uppercase;
 }
 
 
 
 /****** pc ******/
+@media (min-width: 1200px) {
+
+  main {
+    margin: 0px 120px;
+  }
+
+  /* works-main */
+  .works-main {
+    height: 1300px;
+    margin: 0px 120px;
+  }
+
+  .project-title {
+    font-size: 55px;
+    margin-bottom: 30px;
+  }
+
+  .project-info {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  .project-info li {
+    font-size: 16px;
+    line-height: 32px;
+    width: 220px;
+    height: 35px;
+  }
+
+  .project-txt {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  /* 섹션별 공통 */
+  section {
+    padding: 110px 0px;
+  }
+
+  .works-title {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  /* 개인프로젝트 - goals */
+  .goals-txt ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .goals-txt ul li {
+    line-height: 30px;
+  }
+
+  /* 팀프로젝트 overview */
+  .info .goals {
+    margin-bottom: 35px;
+    position: relative;
+  }
+
+  .info .goals img {
+    width: calc(100% - 650px);
+    height: 530px;
+    margin-bottom: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .info .overview>li {
+    margin-left: 35px;
+  }
+
+  /* 역할, 담당업무, 발표자료 title */
+  .info .overview li h5 {
+    margin-bottom: 15px;
+  }
+
+  /* link */
+  .info .link {
+    display: flex;
+    gap: 35px;
+    margin-bottom: 25px;
+  }
+
+  .info .link li {
+    margin-bottom: 0px;
+  }
+
+  .info .link li a {
+    padding: 6px 35px;
+    width: 220px;
+    font-size: 16px;
+  }
+
+  /* process */
+  .process {
+    margin: 0px;
+    margin-top: 30px;
+    gap: 35px;
+  }
+
+  .process .process-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0px;
+  }
+
+  .process .process-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0px;
+  }
+
+  .process dl dt:after {
+    left: 50%;
+    top: 0px;
+  }
+
+  /* design */
+  .design {
+    width: calc(100% - 40px);
+  }
+
+  .design .design-title {
+    font-family: 'Roboto Flex';
+    font-size: 30px;
+  }
+
+  .design .design-box-list {
+    display: grid;
+  }
+
+  .design .design-box-list .design-box {
+    padding: 40px;
+  }
+
+  .design .design-box-list .design-box h3 {
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+
+  /* publishing */
+  .publishing {}
+
+  .publishing h5 {
+    margin-bottom: 16px;
+  }
+
+  .publishing-wrapper {
+    display: flex;
+    gap: 60px;
+    margin-left: 40px;
+  }
+
+  .publishing ul {
+    margin-left: 20px;
+    width: 100%;
+  }
+
+  .publishing ul li {
+    line-height: 30px;
+  }
+
+  .publishing .css {
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+
+  .publishing .js {
+    margin-left: 0px;
+  }
+
+  /* problems&solutions */
+  .ps .works-title {
+    margin-bottom: 60px;
+  }
+
+  .ps .ps-con {
+    margin-bottom: 70px;
+  }
+
+  .ps .ps-con h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .ps .ps-con p {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  /* result */
+  .result {}
+
+  .result .works-title {
+    margin-bottom: 60px;
+  }
+
+  .result div {
+    margin-left: 35px;
+    display: flex;
+    gap: 45px;
+  }
+
+  .result h5 {
+    margin-bottom: 0px;
+    width: 75px;
+  }
+
+  .result ul {
+    width: 70%;
+    margin-bottom: 40px;
+  }
+
+  .result ul li:after {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 20px;
+    transform: translateY(-230%);
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background: #fff;
+    box-sizing: border-box;
+  }
+
+  .result p {
+    width: calc(100% - 20px);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+
+  .review p {
+    width: 90%;
+  }
+
+  /* link */
+  .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .link img {
+    width: 70%;
+    height: 210px;
+    margin-bottom: 0px;
+  }
+
+  .link .link-btn {
+    gap: 10px;
+  }
+
+  .link .link-btn li {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .link .link-btn li a {
+    font-weight: 500;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 15px;
+  }
+
+
+
+}

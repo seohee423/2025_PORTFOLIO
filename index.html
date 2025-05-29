@@ -30,7 +30,7 @@
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/jquery-ui.min.js"></script>
   <!-- page 별 사용되는 js -->
-  <script defer src=""></script>
+  <script defer src="./js/index.js"></script>
 </head>
 
 <body>
@@ -44,17 +44,15 @@
         </a>
       </h1>
       <!-- pc menu -->
-      <div class="pc-menu">
-        <ul class="main-menu">
-          <li><a href="">about</a></li>
-          <li><a href="">works</a></li>
-          <li><a href="">skills</a></li>
-        </ul>
-        <ul class="sub-menu">
-          <li><a href=""><img src="./assets/images/index/github.png" alt="">GitHub</a></li>
-          <li><a href=""><img src="./assets/images/index/email.png" alt="">E-MAIL</a></li>
-        </ul>
-      </div>
+      <ul class="pc-main-menu">
+        <li><a href="">about</a></li>
+        <li><a href="">works</a></li>
+        <li><a href="">skills</a></li>
+      </ul>
+      <ul class="pc-sub-menu">
+        <li><a href=""><img src="./assets/images/index/github.png" alt="">GitHub</a></li>
+        <li><a href=""><img src="./assets/images/index/email.png" alt="">E-MAIL</a></li>
+      </ul>
       <!-- mobie menu -->
       <div class="hamburger-menu" id="hamburger-menu">
         <div class="line"></div>
@@ -62,7 +60,7 @@
         <div class="line"></div>
       </div>
     </nav>
-    <div class="m-menu">
+    <div class="m-menu" id="m-menu">
       <ul class="main-menu">
         <li><a href="">about</a></li>
         <li><a href="">works</a></li>
@@ -89,7 +87,8 @@
     <section class="whoami">
       <div class="whoami-txt">
         <h3 class="contents-title">Who am I</h3>
-        <p>오프라인에서의 사람들이 만나 온라인에서의 세상을 만들어 나가는 '퍼블리싱'은 매력적인 일입니다.<br>편리한 UX와 트렌디한 디자인으로 사용자의 마음 속에 남을 수 있는 웹을 만들고 싶습니다.
+        <p>오프라인에서의 사람들이 만나 온라인에서의 세상을 만들어 나가는 '퍼블리싱'은 매력적인 일입니다.</p>
+        <p>편리한 UX와 트렌디한 디자인으로 사용자의 마음 속에 남을 수 있는 웹을 만들고 싶습니다.
         </p>
         <a class="viewmore-btn" href="">View More</a>
       </div>
@@ -99,11 +98,13 @@
         <li><img src="./assets/images/index/profile-2.jpg" alt=""></li>
         <li><img src="./assets/images/index/profile-3.jpg" alt=""></li>
         <li><img src="./assets/images/index/profile-4.jpg" alt=""></li>
+        <li><img src="./assets/images/index/profile-1.jpg" alt=""></li>
+        <li><img src="./assets/images/index/profile-2.jpg" alt=""></li>
       </ul>
     </section>
 
     <!------ wokrs  ------>
-    <section>
+    <section class="works">
       <h3 class="contents-title">Works</h3>
       <ul class="works-menu">
         <li>Web Design & Publishing</li>
@@ -127,7 +128,7 @@
           <img class="basic-img" src="./assets/images/index/museum.jpg" alt="">
           <img class="hover-img" src="./assets/images/index/museum-hover.jpg" alt="">
         </li>
-        <li class="ben&jerrys">
+        <li class="benNjerrys">
           <div class="works-txt">
             <h4>BEN&JERRY’S</h4>
             <p>RESPONSIVE WEB DESIGN/PUBLISHING</p>
@@ -168,7 +169,7 @@
     </section>
 
     <!------ skills&tools  ------>
-    <section>
+    <section class="skillsNtools">
       <h3 class="contents-title">Skills&Tools</h3>
       <ul>
         <li>
@@ -263,21 +264,25 @@
 
     <!------ contact  ------>
     <section class="contact">
-      <h4>contact</h4>
-      <h3>joys2225@naver.com</h3>
-      <p>꾸준히 배우고 성장하는 디자이너, 퍼블리셔가 되겠습니다.<br>더 많은 기록들은 아래에서 확인하실 수 있습니다.</p>
+      <div class="contact-txt">
+        <h4>contact</h4>
+        <h3>joys2225@naver.com</h3>
+        <p>꾸준히 배우고 성장하는 디자이너, 퍼블리셔가 되겠습니다.<br>더 많은 기록들은 아래에서 확인하실 수 있습니다.</p>
+      </div>
+      <div class="contact-menu">
+        <ul>
+          <li><a href="">GITHUB</a></li>
+          <li><a href="">포트폴리오 작업일지</a></li>
+          <li><a href="">학습일지</a></li>
+        </ul>
+        <p>©2025 Design & Published By Ahn seohee. All Rights Reserved</p>
+      </div>
     </section>
 
   </main>
 
   <!------ footer  ------>
   <footer>
-    <ul class="footer-menu">
-      <li><a href="">GITHUB</a></li>
-      <li><a href="">포트폴리오 작업일지</a></li>
-      <li><a href="">학습일지</a></li>
-    </ul>
-    <p>©2025 Design & Published By Ahn seohee. All Rights Reserved</p>
     <a class="top-btn" href=""><img src="./assets/images/index/top-btn.png" alt=""></a>
   </footer>
 

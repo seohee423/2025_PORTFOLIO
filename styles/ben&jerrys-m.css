@@ -151,6 +151,10 @@
   width: 79%;
 }
 
+.ps-con:nth-of-type(5) {
+  margin-bottom: 0px;
+}
+
 /* result */
 .result p span {
   color: #FFDF8D;

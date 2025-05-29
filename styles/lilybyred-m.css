@@ -4,6 +4,10 @@
 .project-txt span {
   color: #FF8EB7;
 }
+/* goals */
+.goals p span {
+  color: #FF8EB7;
+}
 
 /* process */
 .process dl:after {

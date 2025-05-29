@@ -2,9 +2,246 @@
 
 body {
   font-family: 'pretendard';
+  background-color: #111;
+  color: #fff;
 }
 
+/****** header mobile ******/
 header {
-  display: none
-  ;
+  z-index: 999;
+  height: 60px;
+  width: 100%;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+}
+
+header .header-nav {
+  padding: 0px 20px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* header logo */
+header .header-nav .logo a {
+  cursor: pointer;
+}
+
+header .header-nav .logo a img {
+  height: 25px;
+}
+
+/* pc menu */
+header .header-nav .pc-main-menu {
+  display: none;
+}
+
+header .header-nav .pc-sub-menu {
+  display: none;
+}
+
+/* mobile hamburger menu */
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger-menu .line {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* mobile hamburger menu -> X icon */
+.menu.active {
+  display: block;
+  transition: 0.5s;
+}
+
+.hamburger-menu.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* mobile menu */
+.m-menu {
+  position: fixed;
+  top: 0;
+  left: -105%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.m-menu.active {
+  left: 0;
+}
+
+header .m-menu .main-menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 85px;
+  align-items: center;
+  justify-content: center;
+}
+
+header .m-menu .main-menu li a {
+  font-size: 30px;
+  font-weight: 500;
+  font-family: 'Roboto Flex';
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header .m-menu .sub-menu {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px;
+}
+
+header .m-menu .sub-menu li a {
+  font-size: 22px;
+  font-weight: 400;
+  font-family: 'Roboto Flex';
+  text-align: center;
+}
+
+header .m-menu .sub-menu li a img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+/****** footer mobile ******/
+footer {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+footer a img {
+  height: 23px;
+}
+
+
+/****** PC ******/
+@media (min-width: 1200px) {
+
+  /****** header PC ******/
+  header .header-nav {
+    padding: 0px 80px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* header logo */
+  header .header-nav .logo {}
+
+  /* pc menu */
+  header .header-nav {
+    display: flex;
+  }
+
+  /* pc main menu */
+  header .header-nav .pc-main-menu {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    color: tomato;
+  }
+
+  header .header-nav .pc-main-menu li a {
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto Flex';
+    text-transform: uppercase;
+  }
+
+  /* pc sub menu */
+  header .header-nav .pc-sub-menu {
+    display: flex;
+    gap: 12px;
+  }
+
+  header .header-nav .pc-sub-menu li a {
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto Flex';
+    text-wrap: nowrap;
+  }
+
+  header .header-nav .pc-sub-menu li a img {
+    height: 21px;
+    margin-right: 5px;
+  }
+
+  /* mobile hamburger menu */
+  .hamburger-menu {
+    display: none;
+  }
+
+  /* mobile menu */
+  .m-menu {
+    display: none;
+  }
+
+  /****** footer PC ******/
+  footer {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 75px;
+  }
+
+  footer a {
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+  }
+
+  footer a img {
+    height: 20px;
+  }
+
 }

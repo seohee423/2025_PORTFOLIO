@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+main {}
+
+/****** main video section ******/
+.main-video {
+  height: 100vh;
+  width: 100vw;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.main-video .main-title {
+  width: 260px;
+  font-size: 55px;
+  font-weight: 400;
+  font-family: 'Roboto Flex';
+  margin-bottom: 30px;
+  overflow-wrap: break-word;
+}
+
+.main-video img {
+  height: 70px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+.main-video h6 {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Pretendard';
+  line-height: 24px;
+  width: 250px;
+}
+
+/****** who am i ******/
+.whoami {
+  width: 100vw;
+  height: 250vh;
+  padding: 20px;
+  position: relative;
+}
+
+.whoami .whoami-txt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.whoami .whoami-txt .contents-title {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Roboto Flex';
+  margin-bottom: 20px;
+}
+
+.whoami .whoami-txt p {
+  width: 75%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.whoami .whoami-txt p:last-of-type {
+  margin-top: 15px;
+}
+
+.whoami .whoami-txt .viewmore-btn {
+  margin-top: 20px;
+  width: 110px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: 'Roboto Flex';
+}
+
+.whoami .photo-dump {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  z-index: -99;
+}
+
+.whoami .photo-dump li {}
+
+.whoami .photo-dump li img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.whoami .photo-dump li:nth-of-type(1) {
+  width: 230px;
+}
+
+.whoami .photo-dump li:nth-of-type(2) {
+  width: 200px;
+}
+
+.whoami .photo-dump li:nth-of-type(3) {
+  width: 300px;
+}
+
+.whoami .photo-dump li:nth-of-type(4) {
+  width: 230px;
+}
+
+.whoami .photo-dump li:nth-of-type(5) {
+  width: 200px;
+}
+
+.whoami .photo-dump li:nth-of-type(6) {
+  width: 300px;
+}
+
+/****** works ******/
+.works {
+  padding: 60px 20px;
+}
+
+.works .contents-title {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Roboto Flex';
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.works .works-menu {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.works .works-menu li {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  font-family: 'Roboto Flex';
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  text-wrap: nowrap;
+}
+
+.works .works-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+}
+
+.works .works-contents li {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+.works .works-contents .alchera {}
+
+.works .works-contents .museum {}
+
+.works .works-contents .benNjerrys {}
+
+.works .works-contents .lilybyred {}
+
+.works .works-contents .hautmeal {}
+
+.works .works-contents .works-txt {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 9;
+  padding: 13px 17px;
+  color: #fff;
+  /* display: none; */
+}
+
+.works .works-contents .works-txt h4 {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Roboto Flex';
+}
+
+.works .works-contents .works-txt p {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: 'Roboto Flex';
+}
+
+.works .works-contents li img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.works .works-contents .basic-img {}
+
+.works .works-contents .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/****** flow-txt ******/
+.flow-txt {
+  display: flex;
+  gap: 15px;
+}
+.flow-txt h5 {
+  font-family: 'Roboto Flex';
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-style: italic;
+  text-wrap: nowrap;
+}
+
+/****** skills&tools ******/
+.skillsNtools {
+  padding: 50px 20px;
+}
+.skillsNtools {}
+.skillsNtools .contents-title {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Roboto Flex';
+  margin-bottom: 35px;
+  text-align: center;
+}
+.skillsNtools ul {}
+.skillsNtools>ul>li {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #fff;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.skillsNtools>ul>li:last-child {
+  border-bottom: 1px solid #fff;
+}
+.skillsNtools ul li .skills-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skillsNtools ul li .skills-txt h5 {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Roboto Flex';
+}
+.skillsNtools ul li .skills-txt ul {
+  display: none;
+}
+.skillsNtools ul li .skills-txt ul li {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+.skillsNtools ul li img {
+  transform: rotate(45deg);
+  width: 16px;
+  height: 16px;
+}
+
+.skillsNtools ul li:hover .skills-txt ul {
+  display: block;
+}
+.skillsNtools ul li:hover img {
+  transform: rotate(90deg);
+}
