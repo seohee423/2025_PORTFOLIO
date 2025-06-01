@@ -24,14 +24,15 @@
   }
 
   .main-video img {
-    height: 66px;
-    right: 380px;
+    height: 70px;
+    right: 410px;
     bottom: 50px;
   }
 
   .main-video h6 {
-    line-height: 22px;
-    width: 290px;
+    font-size: 18px;
+    line-height: 24px;
+    width: 320px;
     margin-bottom: 15px;
   }
 
@@ -127,7 +128,8 @@
 
   .works .works-contents {
     display: grid;
-    grid-template-rows: 380px 190px 190px;
+    /* grid-template-rows: 380px 190px 190px; */
+    grid-template-rows: 1fr 0.5fr 0.5fr;
     grid-template-columns: 55% 45%;
     gap: 25px;
     position: relative;
@@ -137,7 +139,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    transition: 0.3s ease-in-out;
+    cursor: pointer;
   }
 
   .works .works-contents .alchera {
@@ -174,7 +176,7 @@
     z-index: 9;
     padding: 0px;
     color: #111;
-    display: none;
+    opacity: 0;
   }
 
   .works .works-contents li img {
@@ -188,15 +190,160 @@
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
   }
 
   .works .works-contents li:hover .hover-img {
-    display: block;
+    opacity: 1;
   }
 
   .works .works-contents li:hover .works-txt {
+    opacity: 1;
+  }
+
+  /****** skills&tools ******/
+  .skillsNtools {
+    padding: 120px 80px;
+  }
+
+  .skillsNtools {}
+
+  .skillsNtools .contents-title {
+    font-size: 55px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
+  .skillsNtools ul {}
+
+  .skillsNtools>ul>li {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .skills-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .skills-txt ul {
+    /* display: none; */
+  }
+
+  .skills-txt>ul>li {
+    line-height: 25px;
+    font-size: 16px;
+    margin-left: 35px;
+  }
+
+  .skills-txt ul li:after {
+    left: -20px;
+    top: 20px;
+  }
+
+  .skillsNtools ul li .close-btn {
+    transform: rotate(45deg);
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
     display: block;
+  }
+
+  .tools-txt ul {
+    margin-left: 15px;
+  }
+
+  .tools-txt ul li {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .tools-txt ul li:after {
+    width: 0;
+  }
+
+  .tools-txt ul .program-wrapper {
+    margin: 0;
+    display: flex;
+    gap: 25px;
+  }
+
+  .program {
+    display: flex;
+    gap: 7px;
+  }
+
+  .program img {
+    height: 25px;
+  }
+
+  .program img:after {}
+
+  .program p {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Roboto Flex';
+  }
+
+
+  /****** contact ******/
+  .contact {
+    padding: 0px 80px;
+  }
+
+  .contact .contact-txt h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .contact .contact-txt h3 {
+    font-size: 60px;
+  }
+
+  .contact .contact-txt h3 br {
+    display: none;
+  }
+
+  .contact .contact-txt p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .contact .contact-menu {
+    width: calc(100% - 160px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 35px;
+    left: 80px;
+  }
+
+  .contact .contact-menu ul {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0px;
+  }
+
+  .contact .contact-menu ul li {}
+
+  .contact .contact-menu ul li a {
+    font-size: 16px;
+    padding: 8px 25px;
+    border-radius: 30px;
+  }
+
+  .contact .contact-menu p {
+    line-height: 0px;
+    font-size: 12px;
+    margin-left: 0px;
+    margin-right: 70px;
   }
 
 }

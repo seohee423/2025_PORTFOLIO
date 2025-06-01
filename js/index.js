@@ -8,3 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburgerMenu.classList.toggle('active');
   });
 });
+
+/* skills&tools */
+// $('.close-btn').click(function () {
+//   $('.skills-txt>ul').stop().slideDown();
+//   return false;
+// })

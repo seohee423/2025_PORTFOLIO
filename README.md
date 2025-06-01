@@ -3,9 +3,15 @@ https://seohee423.github.io/2025_PORTFOLIO/
 
 ----
 
-## 250529 - 
+## 250601
+#### css
+- about 상세페이지 PC css 작업
+- about 메인 영역 뷰포트에 따라 조절되는 타이틀&video : font-size 단위를 vw로 사용
+
+## 250529 - 250530
 #### css
 - 메인 페이지 모바일, PC css 작업
+- about 상세페이지 모바일 css 작업
 
 ## 250528
 #### css

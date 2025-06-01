@@ -174,7 +174,9 @@ main {}
 
 .works .works-contents .benNjerrys {}
 
-.works .works-contents .lilybyred {}
+.works .works-contents .lilybyred img {
+  object-position: 0% 50%;
+}
 
 .works .works-contents .hautmeal {}
 
@@ -182,13 +184,12 @@ main {}
   width: 100%;
   height: 250px;
   position: absolute;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: flex-end;
   z-index: 9;
   padding: 13px 17px;
   color: #fff;
-  /* display: none; */
 }
 
 .works .works-contents .works-txt h4 {
@@ -216,28 +217,48 @@ main {}
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  opacity: 0;
 }
 
 /****** flow-txt ******/
 .flow-txt {
-  display: flex;
-  gap: 15px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.flow-txt h5 {
+
+.flow-txt .flow-txt-wrapper {
+  display: inline-flex;
+  gap: 15px;
+  animation: flow 20s linear infinite;
+}
+
+.flow-txt .flow-txt-wrapper h5 {
   font-family: 'Roboto Flex';
   font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
   font-style: italic;
-  text-wrap: nowrap;
+  white-space: nowrap;
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 /****** skills&tools ******/
 .skillsNtools {
   padding: 50px 20px;
 }
+
 .skillsNtools {}
+
 .skillsNtools .contents-title {
   font-size: 30px;
   font-weight: 700;
@@ -245,7 +266,9 @@ main {}
   margin-bottom: 35px;
   text-align: center;
 }
+
 .skillsNtools ul {}
+
 .skillsNtools>ul>li {
   width: 100%;
   height: 100%;
@@ -253,39 +276,150 @@ main {}
   padding: 25px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   cursor: pointer;
 }
+
 .skillsNtools>ul>li:last-child {
   border-bottom: 1px solid #fff;
 }
-.skillsNtools ul li .skills-txt {
+
+.skills-txt {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.skillsNtools ul li .skills-txt h5 {
+
+.skills-txt h5 {
   font-size: 20px;
   font-weight: 600;
   font-family: 'Roboto Flex';
 }
-.skillsNtools ul li .skills-txt ul {
-  display: none;
+
+.skills-txt ul {
+  /* display: none; */
 }
-.skillsNtools ul li .skills-txt ul li {
+
+.skills-txt>ul>li {
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
+  margin-left: 20px;
+  position: relative;
 }
-.skillsNtools ul li img {
+
+.skills-txt ul li:after {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 17px;
+  transform: translateY(-230%);
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.skillsNtools ul li .close-btn {
   transform: rotate(45deg);
   width: 16px;
   height: 16px;
+  margin-top: 5px;
+  display: none;
 }
 
-.skillsNtools ul li:hover .skills-txt ul {
-  display: block;
+.tools-txt ul li {
+  margin-left: 0;
+  margin-bottom: 20px;
 }
-.skillsNtools ul li:hover img {
-  transform: rotate(90deg);
+
+.tools-txt ul li:after {
+  width: 0;
+}
+
+.tools-txt ul .program-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.program {}
+
+.program img {
+  height: 23px;
+}
+
+.program img:after {}
+
+.program p {
+  display: none;
+}
+
+/****** contact ******/
+.contact {
+  width: 100vw;
+  height: 100vh;
+  padding: 0px 20px;
+  position: relative;
+}
+
+.contact .contact-txt {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact .contact-txt h4 {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Roboto Flex';
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.contact .contact-txt h3 {
+  font-size: 45px;
+  font-weight: 600;
+  font-family: 'Roboto Flex';
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.contact .contact-txt p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.contact .contact-txt p br {}
+
+.contact .contact-menu {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.contact .contact-menu ul {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.contact .contact-menu ul li {}
+
+.contact .contact-menu ul li a {
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+.contact .contact-menu p {
+  font-size: 9px;
+  font-weight: 300;
+  font-family: 'Roboto Flex';
+  margin-left: 3px;
 }

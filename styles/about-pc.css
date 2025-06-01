@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+@media (min-width: 1200px) {
+
+  /****** about-info ******/
+  .about-info {
+    padding: 120px 80px;
+    width: 100%;
+    display: block;
+  }
+
+  .about-info .info0 {
+    font-size: 5.5vw;
+    line-height: 7vw;
+    width: 100%;
+    text-align: left;
+  }
+
+  .about-info .info1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .about-info .info1 h2 {
+    font-size: 5.5vw;
+    line-height: 7vw;
+    height: auto;
+    margin: 0;
+  }
+
+  .about-info .info1 video {
+    width: 25vw;
+    height: 25vh;
+    margin: 20px 30px 0px 0px;
+  }
+
+  .about-info .info2 {
+    width: 68vw;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: calc(100% - 63vw);
+  }
+
+  .about-info .info2 .info2-txt {
+    height: auto;
+  }
+
+  .about-info h2 br {}
+
+  .about-info .info2 .info2-txt p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .about-info p br {}
+
+  .about-info .info2 .info2-txt a {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  /****** keywords ******/
+  .keywords {
+    padding: 120px 0px;
+    text-align: center;
+  }
+
+  .keywords h3 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .keywords h3 br {
+    display: none;
+  }
+
+  .keywords p {
+    padding: 0px 60px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  .keywords p:last-of-type {
+    margin-bottom: 45px;
+  }
+
+  .keywords p br {
+    display: none;
+  }
+
+  .keywords-wrapper ul {
+    gap: 15px;
+  }
+
+  .keywords-slide1 {
+    margin-bottom: 15px;
+  }
+
+  .keywords-wrapper ul li {
+    width: 160px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    border-radius: 15px;
+  }
+
+  /****** study ******/
+  .study {
+    padding: 120px 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+  }
+
+  .study>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .study video {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .study .history {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .study .history dl {
+    position: relative;
+  }
+
+  .study .history dl:after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 3px;
+    height: 150%;
+    width: 1px;
+    background: #fff;
+  }
+
+  .study .history dl:nth-of-type(3):after {
+    height: 100%;
+  }
+
+  .study .history dl dt {
+    font-size: 22px;
+    margin-bottom: 7px;
+    margin-left: 35px;
+  }
+
+  .study .history dl dt:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 45px;
+    transform: translateY(-230%);
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: #fff;
+    box-sizing: border-box;
+  }
+
+  .study .history dl dd {
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 40px;
+  }
+
+  .study h5 {
+    font-size: 3vw;
+    line-height: 4vw;
+    width: 40vw;
+    margin-bottom: 0px;
+  }
+
+  .study .license li {
+    font-size: 16px;
+    line-height: 27px;
+    margin-left: 20px;
+  }
+
+  /****** tools ******/
+  .tools {
+    padding: 120px 80px;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .tools .tools-box {
+    padding: 50px 30px;
+    gap: 40px;
+    justify-content: space-between;
+  }
+
+  .tools .tools-box .tools-txt {
+    gap: 10px;
+    padding: 0px;
+  }
+
+  .tools .tools-box .tools-logo {
+    gap: 13px;
+  }
+
+  /****** contact ******/
+  .contact {
+    padding: 120px 80px 30px;
+  }
+
+  .contact h2 {
+    font-size: 85px;
+    margin-bottom: 60px;
+  }
+
+  .contact .contact-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .contact .contact-menu li {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 12px 40px;
+    border-radius: 15px;
+  }
+
+  .contact p {
+    font-size: 12px;
+    margin-top: 35px;
+  }
+
+}
