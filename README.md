@@ -3,6 +3,11 @@ https://seohee423.github.io/2025_PORTFOLIO/
 
 ----
 
+## 250602
+#### html, css
+- index.html 메인 영상 vimeo에 업로드 후 첨부
+- 모바일, PC 버전 영상 비율 css로 조정
+
 ## 250601
 #### css
 - about 상세페이지 PC css 작업
