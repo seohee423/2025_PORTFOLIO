@@ -52,7 +52,7 @@
   .main-video .video-txt img {
     height: 70px;
     right: 420px;
-    bottom: 65px;
+    bottom: 70px;
   }
 
   .main-video .video-txt h6 {
@@ -85,11 +85,18 @@
 
   .whoami .whoami-txt .viewmore-btn {
     margin-top: 50px;
+  }
+
+  .viewmore-btn span {
     width: 150px;
     height: 40px;
     line-height: 40px;
     border-radius: 20px;
     font-size: 15px;
+  }
+
+  .viewmore-btn::before {
+    border-radius: 20px;
   }
 
   .whoami .photo-dump {
@@ -334,6 +341,25 @@
 
   .contact .contact-txt h3 {
     font-size: 60px;
+    width: 650px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .contact .contact-txt h3::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.5s ease;
+  }
+
+  .contact .contact-txt h3:hover::before {
+    width: 100%;
   }
 
   .contact .contact-txt h3 br {
@@ -361,12 +387,45 @@
     margin-bottom: 0px;
   }
 
-  .contact .contact-menu ul li {}
+  .link-btn {
+    position: relative;
+    display: inline-block;
+  }
 
-  .contact .contact-menu ul li a {
-    font-size: 16px;
+  .link-btn span {
+    position: relative;
+    top: 0;
+    left: 0;
     padding: 8px 25px;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto Flex';
+    color: #fff;
+    border: 1px solid #fff;
     border-radius: 30px;
+    transition: 0.5s;
+  }
+
+  .link-btn::before {
+    background-color: #fff;
+    transition: 0.3s ease-out;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    border-radius: 30px;
+  }
+
+  .link-btn:hover::before {
+    width: 100%;
+  }
+
+  .link-btn span:hover {
+    color: #111;
+    font-weight: 300;
+    transition: 0.2s 0.1s;
   }
 
   .contact .contact-menu p {

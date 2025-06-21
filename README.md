@@ -3,6 +3,19 @@ https://seohee423.github.io/2025_PORTFOLIO/
 
 ----
 
+## 250620-250621
+#### html, css
+###### index, global
+- btn 애니메이션 codepen 참고하여 구현
+- flow-text 애니메이션, 아이콘 움직임 애니메이션 css로 구현
+- email 밑줄 이벤트 ::before로 구현
+- go-to-top btn 애니메이션 구현
+- header flip button 구현(codepen)
+- 텍스트 드래그 색상 변경 
+###### about
+- button hover 이벤트
+- contact btn 색상 좌-우 hover 이벤트
+
 ## 250602
 #### html, css
 - index.html 메인 영상 vimeo에 업로드 후 첨부
