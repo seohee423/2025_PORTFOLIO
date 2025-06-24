@@ -26,11 +26,20 @@
   <!-- page 별 css style -->
   <link rel="stylesheet" href="./styles/ben&jerrys-m.css">
   <link rel="stylesheet" href="./styles/ben&jerrys-pc.css">
+  <!-- GSAP&ScrollTrigger -->
+  <!-- GSAP Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- ScrollTrigger Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <!-- jQuery -->
   <script src="./js/jquery-3.6.0.min.js"></script>
-  <script src="./js/jquery-ui.min.js"></script>
+  <script src="./js/jquery-ui.min.js"></script>  
+  <!-- 스크롤 스무더 -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+
   <!-- page 별 사용되는 js -->
-  <script defer src=""></script>
+  <script defer src="./js/sub-common.js"></script>
+  <script defer src="./js/global.js"></script>
 </head>
 
 <body>
@@ -45,13 +54,39 @@
       </h1>
       <!-- pc menu -->
       <ul class="pc-main-menu">
-        <li><a href="./about.html">about</a></li>
-        <li><a href="./index.html#works">works</a></li>
-        <li><a href="./index.html#skills">skills</a></li>
+        <li>
+          <div class="cube-menu">
+            <div class="cube-face cube-front"><a href="./about.html">ABOUT</a></div>
+            <div class="cube-face cube-top"><a href="./about.html">ABOUT</a></div>
+          </div>
+        </li>
+        <li>
+          <div class="cube-menu">
+            <div class="cube-face cube-front"><a href="./index.html#works">WORKS</a></div>
+            <div class="cube-face cube-top"><a href="./index.html#works">WORKS</a></div>
+          </div>
+        </li>
+        <li>
+          <div class="cube-menu">
+            <div class="cube-face cube-front"><a href="./index.html#skills">SKILLS</a></div>
+            <div class="cube-face cube-top"><a href="./index.html#skills">SKILLS</a></div>
+          </div>
+        </li>
       </ul>
+      <!-- PC sub-menu -->
       <ul class="pc-sub-menu">
-        <li><a href="https://github.com/seohee423" target="_blank"><img src="./assets/images/index/github.png" alt="">GitHub</a></li>
-        <li><a href="" target="_blank"><img src="./assets/images/index/email.png" alt="">E-MAIL</a></li>
+        <li>
+          <a href="https://github.com/seohee423" target="_blank">
+            <img src="./assets/images/index/github.png" alt="">
+            <span>GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank">
+            <img src="./assets/images/index/email.png" alt="">
+            <span>E-MAIL</span>
+          </a>
+        </li>
       </ul>
       <!-- mobie menu -->
       <div class="hamburger-menu" id="hamburger-menu">
@@ -67,7 +102,8 @@
         <li><a href="./index.html#skills">skills</a></li>
       </ul>
       <ul class="sub-menu">
-        <li><a href="https://github.com/seohee423" target="_blank"><img src="./assets/images/index/github.png" alt="">GitHub</a></li>
+        <li><a href="https://github.com/seohee423" target="_blank"><img src="./assets/images/index/github.png"
+              alt="">GitHub</a></li>
         <li><a href="" target="_blank"><img src="./assets/images/index/email.png" alt="">E-MAIL</a></li>
       </ul>
     </div>

@@ -588,16 +588,26 @@ a {
     display: flex;
     gap: 35px;
     margin-bottom: 25px;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .info .link li {
     margin-bottom: 0px;
+    display: block;
+    cursor: pointer;
   }
 
   .info .link li a {
-    padding: 6px 35px;
-    width: 220px;
+    text-wrap: nowrap;
+    display: block;
     font-size: 16px;
+    transition: 0.3s;
+  }
+
+  .info .link li:hover a {
+    background-color: #fff;
+    color: #111;
   }
 
   /* process */
@@ -778,6 +788,14 @@ a {
     height: 40px;
     line-height: 40px;
     border-radius: 15px;
+    transition: 0.3s;
+  }
+
+  .link .link-btn li a:hover {
+    background-color: #111;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
   }
 
 

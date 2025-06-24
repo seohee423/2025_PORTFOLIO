@@ -1,13 +1,42 @@
 @charset "utf-8";
 
 main {
+  height: auto;
+  max-height: none;
   overflow-x: hidden;
+  overflow-y: hidden !important;
+}
+
+/****** title 색상 ******/
+.fill {
+  position: relative;
+  display: inline-block;
+  -webkit-text-fill-color: #1a1a1a; /* 기본 색상 */
+  color: transparent;
+  overflow: hidden;
+}
+
+.fill::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: #fff; /* 채워질 색상 */
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 1.5s ease; /* 부드럽게 채워짐 */
+}
+
+.fill.active::before {
+  width: 100%;
 }
 
 /****** main video section ******/
 .main-video {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -91,20 +120,26 @@ main {
 
 /****** who am i ******/
 .whoami {
-  width: 100vw;
-  height: 250vh;
-  padding: 20px;
+  width: 100%;
+  height: 300vh;
   position: relative;
 }
 
 .whoami .whoami-txt {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+}
+
+.whoami-txt.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .whoami .whoami-txt .contents-title {
@@ -121,6 +156,32 @@ main {
   line-height: 20px;
 }
 
+/* 소개글 색상 스크롤 이벤트 */
+.fill-txt {
+  position: relative;
+  display: inline-block;
+  -webkit-text-fill-color: #111; /* 기본 색상 */
+  color: transparent;
+  overflow: hidden;
+}
+
+.fill-txt::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: #fff; /* 채워질 색상 */
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 2s ease; /* 부드럽게 채워짐 */
+}
+
+.fill-txt.active::before {
+  width: 100%;
+}
+
 .whoami .whoami-txt p:last-of-type {
   margin-top: 15px;
 }
@@ -132,8 +193,7 @@ main {
   outline-offset: 0;
 }
 
-::before,
-::after {
+::before {
   position: absolute;
   content: "";
 }
@@ -161,11 +221,6 @@ main {
   transition: 0.5s;
 }
 
-/* .viewmore-btn:hover span {
-  background-color: #fff;
-  color: #111;
-} */
-
 .viewmore-btn::before {
   background-color: #fff;
   transition: 0.3s ease-out;
@@ -187,45 +242,63 @@ main {
   transition: 0.2s 0.1s;
 }
 
-.whoami .photo-dump {
+.photo-dump-wrapper {
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  height: 300vh;
   position: absolute;
-  top: 0;
+  top: 130vh;
   z-index: -99;
 }
 
-.whoami .photo-dump li {}
+.photo-dump {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
-.whoami .photo-dump li img {
+.photo-dump li {
+  position: absolute;
+}
+
+.photo-dump li img {
   width: 100%;
   border-radius: 15px;
 }
 
-.whoami .photo-dump li:nth-of-type(1) {
-  width: 230px;
+.photo-dump-wrapper li:nth-of-type(1) {
+  width: 45%;
+  top: 0%;
+  left: 12%;
 }
 
-.whoami .photo-dump li:nth-of-type(2) {
-  width: 200px;
+.photo-dump-wrapper li:nth-of-type(2) {
+  width: 30%;
+  top: 15%;
+  right: 7%;
 }
 
-.whoami .photo-dump li:nth-of-type(3) {
-  width: 300px;
+.photo-dump-wrapper li:nth-of-type(3) {
+  width: 40%;
+  top: 32%;
+  left: 6%;
 }
 
-.whoami .photo-dump li:nth-of-type(4) {
-  width: 230px;
+.photo-dump-wrapper li:nth-of-type(4) {
+  width: 55%;
+  top: 45%;
+  right: 8%;
 }
 
-.whoami .photo-dump li:nth-of-type(5) {
-  width: 200px;
+.photo-dump-wrapper li:nth-of-type(5) {
+  width: 35%;
+  top: 65%;
+  left: 13%;
 }
 
-.whoami .photo-dump li:nth-of-type(6) {
-  width: 300px;
+.photo-dump-wrapper li:nth-of-type(6) {
+  width: 27%;
+  top: 73%;
+  right: 6%;
 }
 
 /****** works ******/
@@ -237,8 +310,8 @@ main {
   font-size: 30px;
   font-weight: 700;
   font-family: 'Roboto Flex';
-  text-align: center;
   margin-bottom: 35px;
+  text-align: center;
 }
 
 .works .works-menu {
@@ -386,8 +459,6 @@ main {
   padding: 25px;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  cursor: pointer;
 }
 
 .skillsNtools>ul>li:last-child {
@@ -467,7 +538,7 @@ main {
 
 /****** contact ******/
 .contact {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 0px 20px;
   position: relative;

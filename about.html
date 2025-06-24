@@ -26,11 +26,20 @@
   <!-- page 별 css style -->
   <link rel="stylesheet" href="./styles/about-m.css">
   <link rel="stylesheet" href="./styles/about-pc.css">
+
+  <!-- GSAP&ScrollTrigger -->
+  <!-- GSAP Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- ScrollTrigger Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   <!-- jQuery -->
   <script src="./js/jquery-3.6.0.min.js"></script>
-  <script src="./js/jquery-ui.min.js"></script>
+  <script src="./js/jquery-ui.min.js"></script> <!-- 스크롤 스무더 -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
   <!-- page 별 사용되는 js -->
-  <script defer src=""></script>
+  <script defer src="./js/global.js"></script>
+  <script defer src="./js/about.js"></script>
 </head>
 
 <body>
@@ -45,13 +54,39 @@
       </h1>
       <!-- pc menu -->
       <ul class="pc-main-menu">
-        <li><a href="./about.html">about</a></li>
-        <li><a href="./index.html#works">works</a></li>
-        <li><a href="./index.html#skills">skills</a></li>
+        <li>
+          <div class="cube-menu">
+            <div class="cube-face cube-front"><a href="./about.html">ABOUT</a></div>
+            <div class="cube-face cube-top"><a href="./about.html">ABOUT</a></div>
+          </div>
+        </li>
+        <li>
+          <div class="cube-menu">
+            <div class="cube-face cube-front"><a href="./index.html#works">WORKS</a></div>
+            <div class="cube-face cube-top"><a href="./index.html#works">WORKS</a></div>
+          </div>
+        </li>
+        <li>
+          <div class="cube-menu">
+            <div class="cube-face cube-front"><a href="./index.html#skills">SKILLS</a></div>
+            <div class="cube-face cube-top"><a href="./index.html#skills">SKILLS</a></div>
+          </div>
+        </li>
       </ul>
+      <!-- PC sub-menu -->
       <ul class="pc-sub-menu">
-        <li><a href="https://github.com/seohee423" target="_blank"><img src="./assets/images/index/github.png" alt="">GitHub</a></li>
-        <li><a href="" target="_blank"><img src="./assets/images/index/email.png" alt="">E-MAIL</a></li>
+        <li>
+          <a href="https://github.com/seohee423" target="_blank">
+            <img src="./assets/images/index/github.png" alt="">
+            <span>GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank">
+            <img src="./assets/images/index/email.png" alt="">
+            <span>E-MAIL</span>
+          </a>
+        </li>
       </ul>
       <!-- mobie menu -->
       <div class="hamburger-menu" id="hamburger-menu">
@@ -67,7 +102,8 @@
         <li><a href="./index.html#skills">skills</a></li>
       </ul>
       <ul class="sub-menu">
-        <li><a href="https://github.com/seohee423" target="_blank"><img src="./assets/images/index/github.png" alt="">GitHub</a></li>
+        <li><a href="https://github.com/seohee423" target="_blank"><img src="./assets/images/index/github.png"
+              alt="">GitHub</a></li>
         <li><a href="" target="_blank"><img src="./assets/images/index/email.png" alt="">E-MAIL</a></li>
       </ul>
     </div>
@@ -185,27 +221,28 @@
       <div class="tools-box">
         <h4>HTML5 & CSS3</h4>
         <ul class="tools-txt">
-          <li>웹 접근성을 고려한 시맨틱 마크업</li>
-          <li>미디어쿼리를 이용한 반응형 웹 제작</li>
+          <li><span>웹 접근성</span>을 고려한 시맨틱 마크업</li>
+          <li>미디어쿼리를 이용한 <span>반응형 웹</span> 제작</li>
           <li>CSS를 이용한 다양한 스타일 및 Animation 활용</li>
-          <li>SCSS를 활용한 스타일 값</li>
+          <li><span>SCSS</span>를 활용한 스타일 값</li>
         </ul>
         <div class="tools-logo">
-          <img src="./assets/images/about/vscode.png" alt="">
-          <img src="./assets/images/about/css3.png" alt="">
+          <img src="./assets/images/about/html5.svg" alt="">
+          <img src="./assets/images/about/css3.svg" alt="">
         </div>
       </div>
       <div class="tools-box">
         <h4>JavaScript & jQuery</h4>
         <ul class="tools-txt">
-          <li>ES6+ 문법</li>
-          <li>jQuery를 이용한 DOM 제어</li>
+          <li><span>ES6+</span> 문법</li>
+          <li>jQuery를 이용한 <span>DOM 제어</span></li>
           <li>비동기 통신 AJAX 활용 : $.ajax(), fetch, async/await를 이용한 데이터 처리, 통신 구현 및 작업 효율성 향상</li>
-          <li>setTimeout, setInterval 등 비동기 함수 사용</li>
+          <li>setTimeout, setInterval 등 <span>비동기 함수</span> 사용</li>
+          <li><span>GSAP</span> 등 플러그인 사용을 통한 이벤트트</li>
         </ul>
         <div class="tools-logo">
-          <img src="./assets/images/about/js.png" alt="">
-          <img src="./assets/images/about/jquery.png" alt="">
+          <img src="./assets/images/about/js.svg" alt="">
+          <img src="./assets/images/about/jquery.svg" alt="">
         </div>
       </div>
       <div class="tools-box">
@@ -216,10 +253,10 @@
           <li>Figma로 와이어프레임, 프로토타입 제작</li>
         </ul>
         <div class="tools-logo">
-          <img src="./assets/images/about/ps.png" alt="">
-          <img src="./assets/images/about/ai.png" alt="">
-          <img src="./assets/images/about/pr.png" alt="">
-          <img src="./assets/images/about/figma.png" alt="">
+          <img src="./assets/images/about/ps.svg" alt="">
+          <img src="./assets/images/about/ai.svg" alt="">
+          <img src="./assets/images/about/pr.svg" alt="">
+          <img src="./assets/images/about/figma.svg" alt="">
         </div>
       </div>
       <div class="tools-box">
@@ -230,8 +267,8 @@
           <li>GitHub Team Organization을 이용한<br>실시간 공유 및 협업</li>
         </ul>
         <div class="tools-logo">
-          <img src="./assets/images/about/git.png" alt="">
-          <img src="./assets/images/about/vscode.png" alt="">
+          <img src="./assets/images/about/git.svg" alt="">
+          <img src="./assets/images/about/vscode.svg" alt="">
         </div>
       </div>
     </section>

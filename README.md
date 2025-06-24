@@ -3,6 +3,19 @@ https://seohee423.github.io/2025_PORTFOLIO/
 
 ----
 
+## 250624
+## js, jQuery
+- index about 섹션 : GSAP를 활용한 photoDump 스크롤 애니메이션 이벤트 구현
+- contents-title, whoami 텍스트 색상 채워지는 스크롤 이벤트 구현 (GSAP + ScrollTrigger + ::before 활용)
+
+## 250623
+## js, jQuery
+- footer gototop btn 스크롤 투명도 이벤트
+- header 스크롤 배경색 이벤트
+- GSAP ScrollTrigger 활용하여 index, sub-page 콘텐츠가 스크롤 시 등장하도록 애니메이션 적용
+- skills&tools slideUpDown menu 구현
+- 스크롤 스무더(Smooth Scrolling) 플러그인으로 구현
+
 ## 250620-250621
 #### html, css
 ###### index, global
@@ -15,6 +28,9 @@ https://seohee423.github.io/2025_PORTFOLIO/
 ###### about
 - button hover 이벤트
 - contact btn 색상 좌-우 hover 이벤트
+- skills text 강조
+###### 프로젝트 상세페이지
+- button hover 이벤트
 
 ## 250602
 #### html, css

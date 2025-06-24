@@ -72,6 +72,13 @@
     height: 40px;
     line-height: 40px;
     border-radius: 15px;
+    transition: 0.3s;
+  }
+
+  .prototype .link-btn a:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #111;
   }
 
 

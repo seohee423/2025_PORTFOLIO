@@ -52,7 +52,7 @@
   .about-info h2 br {}
 
   .about-info .info2 .info2-txt p {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 23px;
   }
 
@@ -78,7 +78,7 @@
   }
 
   .keywords h3 {
-    font-size: 25px;
+    font-size: 27px;
     font-weight: 600;
     margin-bottom: 15px;
   }
@@ -89,7 +89,7 @@
 
   .keywords p {
     padding: 0px 60px;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 300;
     line-height: 24px;
   }
@@ -192,7 +192,7 @@
   }
 
   .study .history dl dd {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 22px;
     margin-left: 40px;
   }
@@ -204,8 +204,14 @@
     margin-bottom: 0px;
   }
 
+   .study .license {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+   }
+
   .study .license li {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 27px;
     margin-left: 20px;
   }
@@ -226,6 +232,10 @@
   .tools .tools-box .tools-txt {
     gap: 10px;
     padding: 0px;
+  }
+
+  .tools .tools-box .tools-txt li {
+    font-size: 17px;
   }
 
   .tools .tools-box .tools-logo {
@@ -267,16 +277,21 @@
   }
 
   .contact .contact-menu li {
+    padding: 0;
+  }
+
+  .contact .contact-menu li {
     font-size: 15px;
+    line-height: normal;
     font-weight: 400;
     padding: 12px 40px;
     border-radius: 15px;
-
+    display: block;
     position: relative;
     top: 0;
     left: 0;
-    display: block;
     transition: 0.5s;
+    cursor: pointer;
   }
 
   .contact .contact-menu li::before {
@@ -287,11 +302,30 @@
     left: 0;
     height: 100%;
     width: 0%;
-    border-radius: 30px;
+    border-radius: 15px;
+    z-index: -2;
   }
 
   .contact .contact-menu li:hover::before {
     width: 100%;
+    color: #111;
+  }
+
+  .contact .contact-menu li:hover {
+    color: #111;
+    transition: 0.2s 0.1s;
+  }
+
+  :active,
+  :hover,
+  :focus {
+    outline: 0 !important;
+    outline-offset: 0;
+  }
+
+  ::before {
+    position: absolute;
+    content: "";
   }
 
   .contact p {
