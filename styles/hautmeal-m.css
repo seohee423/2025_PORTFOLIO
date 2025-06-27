@@ -21,6 +21,10 @@
   margin-bottom: 15px;
 }
 
+.project-txt p span {
+  color: #F2D8B6;
+}
+
 /* process */
 .process dl:after {
   content: "";

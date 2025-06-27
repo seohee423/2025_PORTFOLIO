@@ -16,7 +16,29 @@ requestAnimationFrame(raf)
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  const titleElements = gsap.utils.toArray('.project-title, .project-info, .project-video, .works-title, .goals-txt img, .goals-txt ul, .design-box, .css, .js, .ps-con, .good, .bad, .review, .link img, .goals img, .works-title, .goals p, .overview li, .overview .link, .project-img, .prototype-img');
+  const titleElements = gsap.utils.toArray('.project-title, .project-info, .project-video, .project-txt,');
+
+  titleElements.forEach((el) => {
+    gsap.set(el, { opacity: 0, y: 50 });
+
+    gsap.to(el, {
+      opacity: 1,
+      y: 0,
+      duration: 3.0,
+      scrollTrigger: {
+        trigger: el,
+        start: "top 20%",
+        toggleActions: "play none none reverse",
+        markers: false
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const titleElements = gsap.utils.toArray('.project-title, .project-info, .project-video, .project-txt, .works-title, .goals-txt img, .goals-txt ul, .design-box, .css, .js, .ps-con, .good, .bad, .review, .link img, .goals img, .works-title, .goals p, .overview li, .overview .link, .project-img, .prototype-img');
 
   titleElements.forEach((el) => {
     gsap.set(el, { opacity: 0, y: 50 });
