@@ -1,13 +1,4 @@
-/* header 햄버거 메뉴 */
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburgerMenu = document.getElementById('hamburger-menu');
-  const menu = document.getElementById('m-menu');
 
-  hamburgerMenu.addEventListener('click', function () {
-    menu.classList.toggle('active');
-    hamburgerMenu.classList.toggle('active');
-  });
-});
 
 /* 스크롤하면 투명도 1로 변경, 위로 떠오르는 이벤트 */
 document.addEventListener("DOMContentLoaded", () => {
