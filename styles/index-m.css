@@ -11,7 +11,8 @@ main {
 .fill {
   position: relative;
   display: inline-block;
-  -webkit-text-fill-color: #1a1a1a; /* 기본 색상 */
+  -webkit-text-fill-color: #1a1a1a;
+  /* 기본 색상 */
   color: transparent;
   overflow: hidden;
 }
@@ -23,10 +24,12 @@ main {
   left: 0;
   width: 0;
   overflow: hidden;
-  -webkit-text-fill-color: #fff; /* 채워질 색상 */
+  -webkit-text-fill-color: #fff;
+  /* 채워질 색상 */
   white-space: nowrap;
   overflow: hidden;
-  transition: width 1.5s ease; /* 부드럽게 채워짐 */
+  transition: width 1.5s ease;
+  /* 부드럽게 채워짐 */
 }
 
 .fill.active::before {
@@ -154,32 +157,6 @@ main {
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
-}
-
-/* 소개글 색상 스크롤 이벤트 */
-.fill-txt {
-  position: relative;
-  display: inline-block;
-  -webkit-text-fill-color: #111; /* 기본 색상 */
-  color: transparent;
-  overflow: hidden;
-}
-
-.fill-txt::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  overflow: hidden;
-  -webkit-text-fill-color: #fff; /* 채워질 색상 */
-  white-space: nowrap;
-  overflow: hidden;
-  transition: width 2s ease; /* 부드럽게 채워짐 */
-}
-
-.fill-txt.active::before {
-  width: 100%;
 }
 
 .whoami .whoami-txt p:last-of-type {
@@ -314,7 +291,27 @@ main {
   text-align: center;
 }
 
+.works .works-menu-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  cursor: grab;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.works .works-menu-wrapper.dragging {
+  cursor: grabbing;
+}
+
+.works .works-menu-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
 .works .works-menu {
+  width: 360px;
   display: flex;
   gap: 10px;
   margin-bottom: 25px;
@@ -331,11 +328,6 @@ main {
   text-wrap: nowrap;
   cursor: pointer;
   transition: 0.5s;
-}
-
-.works .works-menu li:hover {
-  background-color: #fff;
-  color: #111;
 }
 
 .works .works-contents {

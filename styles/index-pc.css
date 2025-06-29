@@ -79,6 +79,35 @@
     line-height: 25px;
   }
 
+  /* 소개글 색상 스크롤 이벤트 */
+  .fill-txt {
+    position: relative;
+    display: inline-block;
+    -webkit-text-fill-color: #111;
+    /* 기본 색상 */
+    color: transparent;
+    overflow: hidden;
+  }
+
+  .fill-txt::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    -webkit-text-fill-color: #fff;
+    /* 채워질 색상 */
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width 2s ease;
+    /* 부드럽게 채워짐 */
+  }
+
+  .fill-txt.active::before {
+    width: 100%;
+  }
+
   .whoami .whoami-txt p:last-of-type {
     margin-top: 0px;
   }
@@ -179,6 +208,11 @@
     height: 100%;
     position: relative;
     cursor: pointer;
+  }
+
+  .works .works-menu li:hover {
+    background-color: #fff;
+    color: #111;
   }
 
   .works .works-contents .alchera {

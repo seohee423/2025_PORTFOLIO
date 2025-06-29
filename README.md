@@ -3,6 +3,12 @@ https://seohee423.github.io/2025_PORTFOLIO/
 
 ----
 
+## 250629
+## js
+- index works 섹션 모바일 전용 드래그 메뉴 구현
+- 모바일 사이즈 체크 후 콘텐츠 무너진 부분 수정
+- 페이지별 a태그 연결
+
 ## 250624
 ## js, jQuery
 - index about 섹션 : GSAP를 활용한 photoDump 스크롤 애니메이션 이벤트 구현

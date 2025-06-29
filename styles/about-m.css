@@ -45,6 +45,7 @@
   object-fit: cover;
   border-radius: 15px;
   grid-row: 2 / 3;
+  pointer-events: none
 }
 
 .about-info p {
@@ -158,6 +159,7 @@
   height: 20%;
   object-fit: cover;
   border-radius: 15px;
+  pointer-events: none
 }
 
 .study .history {

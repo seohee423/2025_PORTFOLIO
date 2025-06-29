@@ -64,7 +64,7 @@ $(function () {
     }
   );
 
-    $('.skill4').hover(
+  $('.skill4').hover(
     function () {
       if ($(window).width() >= 1200) {
         $('.git').stop().slideDown(300, 'swing');
@@ -77,7 +77,7 @@ $(function () {
     }
   );
 
-    $('.skill5').hover(
+  $('.skill5').hover(
     function () {
       if ($(window).width() >= 1200) {
         $('.tools').stop().slideDown(300, 'swing');
@@ -89,7 +89,7 @@ $(function () {
       }
     }
   );
-  
+
 });
 
 /* whoami photoDump */
@@ -147,4 +147,38 @@ document.addEventListener("DOMContentLoaded", () => {
       once: true // 한 번만 실행되고 유지
     });
   });
+});
+
+
+/* works menu mobile slide */
+document.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.querySelector('.works-menu-wrapper');
+  const menu = document.querySelector('.works-menu');
+  if (!wrapper || !menu) return;
+
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  const SCROLL_SPEED = 1.5;
+
+  // 모바일 전용: touch 이벤트만 사용
+  wrapper.addEventListener('touchstart', e => {
+    isDragging = true;
+    startX = e.touches[0].pageX - wrapper.offsetLeft;
+    scrollLeft = menu.scrollLeft;
+    wrapper.classList.add('dragging');
+  }, { passive: true });
+
+  wrapper.addEventListener('touchend', () => {
+    isDragging = false;
+    wrapper.classList.remove('dragging');
+  });
+
+  wrapper.addEventListener('touchmove', e => {
+    if (!isDragging) return;
+    const x = e.touches[0].pageX - wrapper.offsetLeft;
+    const walk = (x - startX) * SCROLL_SPEED;
+    menu.scrollLeft = scrollLeft - walk;
+  }, { passive: true });
 });
