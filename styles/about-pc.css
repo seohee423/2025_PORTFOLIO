@@ -49,14 +49,10 @@
     height: auto;
   }
 
-  .about-info h2 br {}
-
   .about-info .info2 .info2-txt p {
     font-size: 17px;
     line-height: 23px;
   }
-
-  .about-info p br {}
 
   .about-info .info2 .info2-txt a {
     width: 200px;

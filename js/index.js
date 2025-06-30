@@ -1,5 +1,3 @@
-
-
 /* 스크롤하면 투명도 1로 변경, 위로 떠오르는 이벤트 */
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -96,20 +94,20 @@ $(function () {
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // 1. .whoami-txt 고정 (100vh)
+  // whoami-txt 고정
   ScrollTrigger.create({
     trigger: ".whoami",
     start: "top top",
     endTrigger: ".works",
-    end: "top 100%", // works가 보이기 전 해제
+    end: "top 100%", 
     pin: ".whoami-txt",
-    pinSpacing: true, // 자연스러운 스크롤 유지
+    pinSpacing: true,
     scrub: true
   });
 
-  // 2. photo-dump-wrapper가 뒤에서 올라오도록 애니메이션
+  // photo-dump-wrapper 애니메이션
   gsap.to(".photo-dump-wrapper", {
-    yPercent: -50, // 위로 이동
+    yPercent: -50,
     ease: "none",
     scrollTrigger: {
       trigger: ".whoami",
@@ -128,9 +126,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".fill").forEach(el => {
     ScrollTrigger.create({
       trigger: el,
-      start: "top 80%", // 뷰포트 하단 80% 지점에서 시작
+      start: "top 80%",
       toggleClass: { targets: el, className: "active" },
-      once: true // 한 번만 실행되고 유지
+      once: true
     });
   });
 });
@@ -142,13 +140,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".fill-txt").forEach(el => {
     ScrollTrigger.create({
       trigger: el,
-      start: "top 50%", // 뷰포트 하단 80% 지점에서 시작
+      start: "top 50%",
       toggleClass: { targets: el, className: "active" },
-      once: true // 한 번만 실행되고 유지
+      once: true 
     });
   });
 });
-
 
 /* works menu mobile slide */
 document.addEventListener("DOMContentLoaded", () => {
@@ -162,7 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const SCROLL_SPEED = 1.5;
 
-  // 모바일 전용: touch 이벤트만 사용
   wrapper.addEventListener('touchstart', e => {
     isDragging = true;
     startX = e.touches[0].pageX - wrapper.offsetLeft;

@@ -12,7 +12,6 @@ main {
   position: relative;
   display: inline-block;
   -webkit-text-fill-color: #1a1a1a;
-  /* 기본 색상 */
   color: transparent;
   overflow: hidden;
 }
@@ -25,11 +24,9 @@ main {
   width: 0;
   overflow: hidden;
   -webkit-text-fill-color: #fff;
-  /* 채워질 색상 */
   white-space: nowrap;
   overflow: hidden;
   transition: width 1.5s ease;
-  /* 부드럽게 채워짐 */
 }
 
 .fill.active::before {
@@ -343,17 +340,9 @@ main {
   position: relative;
 }
 
-.works .works-contents .alchera {}
-
-.works .works-contents .museum {}
-
-.works .works-contents .benNjerrys {}
-
 .works .works-contents .lilybyred img {
   object-position: 0% 50%;
 }
-
-.works .works-contents .hautmeal {}
 
 .works .works-contents .works-txt {
   width: 100%;
@@ -385,8 +374,6 @@ main {
   object-fit: cover;
   border-radius: 15px;
 }
-
-.works .works-contents .basic-img {}
 
 .works .works-contents .hover-img {
   position: absolute;
@@ -432,8 +419,6 @@ main {
   padding: 50px 20px;
 }
 
-.skillsNtools {}
-
 .skillsNtools .contents-title {
   font-size: 30px;
   font-weight: 700;
@@ -441,8 +426,6 @@ main {
   margin-bottom: 35px;
   text-align: center;
 }
-
-.skillsNtools ul {}
 
 .skillsNtools>ul>li {
   width: 100%;
@@ -467,10 +450,6 @@ main {
   font-size: 20px;
   font-weight: 600;
   font-family: 'Roboto Flex';
-}
-
-.skills-txt ul {
-  /* display: none; */
 }
 
 .skills-txt>ul>li {
@@ -516,13 +495,9 @@ main {
   gap: 10px;
 }
 
-.program {}
-
 .program img {
   height: 23px;
 }
-
-.program img:after {}
 
 .program p {
   display: none;
@@ -566,8 +541,6 @@ main {
   font-weight: 300;
 }
 
-.contact .contact-txt p br {}
-
 .contact .contact-menu {
   position: absolute;
   bottom: 20px;
@@ -579,11 +552,6 @@ main {
   gap: 5px;
   margin-bottom: 15px;
 }
-
-.contact .contact-menu ul li {}
-
-.contact .contact-menu ul li .link-btn {}
-
 
 .link-btn {
   position: relative;

@@ -4,9 +4,11 @@ https://seohee423.github.io/2025_PORTFOLIO/
 ----
 
 ## 250630
-## html
+## 디자인
+- alchera 목업 제작, html 구조에 첨부
+## html, css
 - img alt값 입력
-- 
+- 불필요한 코드 정리 및 W3C 유효성 검사
 
 ## 250629
 ## js

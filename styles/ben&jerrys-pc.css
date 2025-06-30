@@ -144,7 +144,6 @@
     justify-content: space-between;
   }
 
-
   .ps-con:nth-of-type(4) ul {
     display: flex;
     gap: 40px;

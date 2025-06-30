@@ -1,9 +1,9 @@
 /* 스크롤 스무더 */
 const lenis = new Lenis({
-  duration: 1.2,       // 기본 스크롤 속도 (초)
+  duration: 1.2,   
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   smooth: true,
-  smoothTouch: true   // 모바일에서 부드럽게 하고 싶다면 true
+  smoothTouch: true  
 })
 
 function raf(time) {
