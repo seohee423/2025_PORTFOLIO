@@ -3,11 +3,18 @@ https://seohee423.github.io/2025_PORTFOLIO/
 
 ----
 
+## 250630
+## html
+- img alt값 입력
+- 
+
 ## 250629
 ## js
 - index works 섹션 모바일 전용 드래그 메뉴 구현
+## css
 - 모바일 사이즈 체크 후 콘텐츠 무너진 부분 수정
-- 페이지별 a태그 연결
+## html
+- 전 페이지 a태그 연결 및 문서 파일 첨부
 
 ## 250624
 ## js, jQuery
