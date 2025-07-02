@@ -8,6 +8,32 @@ $(document).ready(function () {
   }, 1500);
 });
 
+/* 마우스 커서 이미지 */
+const cursorImage = document.getElementById('cursorImage');
+
+if (cursorImage) {
+  document.addEventListener('mousemove', (e) => {
+    targetX = e.pageX;
+    targetY = e.pageY;
+    cursorImage.style.display = 'block';
+  });
+
+  document.addEventListener('mouseout', () => {
+    cursorImage.style.display = 'none';
+  });
+
+  function animate() {
+    currentX += (targetX - currentX) * speed;
+    currentY += (targetY - currentY) * speed;
+    cursorImage.style.left = currentX + 'px';
+    cursorImage.style.top = currentY + 'px';
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+}
+
+
 /* header 햄버거 메뉴 */
 document.addEventListener("DOMContentLoaded", function () {
   const hamburgerMenu = document.getElementById('hamburger-menu');
@@ -29,12 +55,26 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* 스크롤 스무더 */
+// const lenis = new Lenis({
+//   duration: 1.2,
+//   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+//   smooth: true,
+//   smoothTouch: true
+// })
+// Lenis 초기화
 const lenis = new Lenis({
   duration: 1.2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   smooth: true,
   smoothTouch: true
-})
+});
+
+// Lenis + GSAP 연동
+lenis.on('scroll', ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
 
 function raf(time) {
   lenis.raf(time)

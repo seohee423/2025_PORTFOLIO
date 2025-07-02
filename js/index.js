@@ -1,8 +1,10 @@
-/* 스크롤하면 투명도 1로 변경, 위로 떠오르는 이벤트 */
+/* GSAP 활용 코드 모음 */
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* 스크롤하면 투명도 1로 변경, 위로 떠오르는 이벤트 */
   gsap.registerPlugin(ScrollTrigger);
 
-  const titleElements = gsap.utils.toArray('.viewmore-btn, .works-menu, .works-contents, .skillsNtools>ul, .contact-txt h4, .contact-txt h3, .contact-txt p, .contact-menu ul li');
+  const titleElements = gsap.utils.toArray('.viewmore-btn, .works-menu, .works-contents, .skillsNtools>ul, .contact-txt h4, .contact-txt h3, .contact-txt p');
 
   titleElements.forEach((el) => {
     gsap.set(el, { opacity: 0, y: 50 });
@@ -19,6 +21,58 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  /* whoami photoDump */
+  gsap.registerPlugin(ScrollTrigger);
+
+  // whoami-txt 고정
+  ScrollTrigger.create({
+    trigger: ".whoami",
+    start: "top top",
+    endTrigger: ".works",
+    end: "top 100%",
+    pin: ".whoami-txt",
+    pinSpacing: true,
+    scrub: true
+  });
+
+  // photo-dump-wrapper 애니메이션
+  gsap.to(".photo-dump-wrapper", {
+    yPercent: -50,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".whoami",
+      start: "top top",
+      endTrigger: ".works",
+      end: "top 80%",
+      scrub: true
+    }
+  });
+
+  /* contents title 색상 효과 */
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.querySelectorAll(".fill").forEach(el => {
+    ScrollTrigger.create({
+      trigger: el,
+      start: "top 80%",
+      toggleClass: { targets: el, className: "active" },
+      once: true
+    });
+  });
+
+  /* whoami txt 색상 효과 */
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.querySelectorAll(".fill-txt").forEach(el => {
+    ScrollTrigger.create({
+      trigger: el,
+      start: "top 50%",
+      toggleClass: { targets: el, className: "active" },
+      once: true
+    });
+  });
+
 });
 
 /* skills&tools */
@@ -89,64 +143,6 @@ $(function () {
   );
 
 });
-
-/* whoami photoDump */
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  // whoami-txt 고정
-  ScrollTrigger.create({
-    trigger: ".whoami",
-    start: "top top",
-    endTrigger: ".works",
-    end: "top 100%", 
-    pin: ".whoami-txt",
-    pinSpacing: true,
-    scrub: true
-  });
-
-  // photo-dump-wrapper 애니메이션
-  gsap.to(".photo-dump-wrapper", {
-    yPercent: -50,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".whoami",
-      start: "top top",
-      endTrigger: ".works",
-      end: "top 80%",
-      scrub: true
-    }
-  });
-});
-
-/* contents title 색상 효과 */
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  document.querySelectorAll(".fill").forEach(el => {
-    ScrollTrigger.create({
-      trigger: el,
-      start: "top 80%",
-      toggleClass: { targets: el, className: "active" },
-      once: true
-    });
-  });
-});
-
-/* whoami txt 색상 효과 */
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  document.querySelectorAll(".fill-txt").forEach(el => {
-    ScrollTrigger.create({
-      trigger: el,
-      start: "top 50%",
-      toggleClass: { targets: el, className: "active" },
-      once: true 
-    });
-  });
-});
-
 
 /* works menu mobile slide */
 document.addEventListener("DOMContentLoaded", () => {

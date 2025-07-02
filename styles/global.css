@@ -18,8 +18,26 @@ body {
   color: #fff;
 }
 
+/****** cursor ******/
+#cursorImage {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  display: none;
+  z-index: 999;
+}
 
-/***** loading page *****/
+.image-effect {
+  transition: filter 1s ease;
+}
+
+.image-effect.light {
+  filter: brightness(0) invert(0);
+}
+
+
+/****** loading page ******/
 .loader {
   position: absolute;
   top: 0;

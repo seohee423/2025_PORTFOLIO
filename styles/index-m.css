@@ -553,6 +553,10 @@ main {
   margin-bottom: 15px;
 }
 
+.contact .contact-menu ul li {
+  transform: none;
+}
+
 .link-btn {
   position: relative;
   display: inline-block;
@@ -562,7 +566,7 @@ main {
   position: relative;
   top: 0;
   left: 0;
-  padding: 7px 20px;
+  padding: 7px 16px;
   display: block;
   font-size: 14px;
   font-weight: 400;
@@ -592,6 +596,11 @@ main {
   color: #111;
   font-weight: 300;
   transition: 0.2s 0.1s;
+}
+
+.element {
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .contact .contact-menu p {
