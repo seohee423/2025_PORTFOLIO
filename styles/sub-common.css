@@ -56,6 +56,11 @@ main {
   line-height: 22px;
 }
 
+.works-main video {
+  width: 100%;
+  margin-bottom: 55px;
+}
+
 /* 섹션별 공통 */
 section {
   padding: 50px 0px;
@@ -491,7 +496,7 @@ a {
   /* works-main */
   .works-main {
     height: 1300px;
-    margin: 0px 120px;
+    /* margin: 0px 120px; */
   }
 
   .project-title {
@@ -516,6 +521,12 @@ a {
   .project-txt {
     font-size: 24px;
     line-height: 30px;
+  }
+
+  .works-main video {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 60px;
   }
 
   /* 섹션별 공통 */
