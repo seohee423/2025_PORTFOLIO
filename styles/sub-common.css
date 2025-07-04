@@ -56,7 +56,9 @@ main {
   line-height: 22px;
 }
 
-.works-main video {
+.works-main iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
   width: 100%;
   margin-bottom: 55px;
 }
@@ -523,7 +525,9 @@ a {
     line-height: 30px;
   }
 
-  .works-main video {
+  .works-main iframe {
+    aspect-ratio: 16 / 9;
+    height: auto;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 60px;
