@@ -10,28 +10,29 @@ $(document).ready(function () {
 
 /* 마우스 커서 이미지 */
 const cursorImage = document.getElementById('cursorImage');
+let targetX = 0, targetY = 0;
+let currentX = 0, currentY = 0;
+const speed = 0.1;
 
-if (cursorImage) {
-  document.addEventListener('mousemove', (e) => {
-    targetX = e.pageX;
-    targetY = e.pageY;
-    cursorImage.style.display = 'block';
-  });
+document.addEventListener('mousemove', (e) => {
+  targetX = e.pageX;
+  targetY = e.pageY;
+  cursorImage.style.display = 'block';
+});
 
-  document.addEventListener('mouseout', () => {
-    cursorImage.style.display = 'none';
-  });
+document.addEventListener('mouseout', () => {
+  cursorImage.style.display = 'none';
+});
 
-  function animate() {
-    currentX += (targetX - currentX) * speed;
-    currentY += (targetY - currentY) * speed;
-    cursorImage.style.left = currentX + 'px';
-    cursorImage.style.top = currentY + 'px';
-    requestAnimationFrame(animate);
-  }
-
-  animate();
+function animate() {
+  currentX += (targetX - currentX) * speed;
+  currentY += (targetY - currentY) * speed;
+  cursorImage.style.left = currentX + 'px';
+  cursorImage.style.top = currentY + 'px';
+  requestAnimationFrame(animate);
 }
+
+animate();
 
 /* header 햄버거 메뉴 */
 document.addEventListener("DOMContentLoaded", function () {
@@ -53,33 +54,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/* 스크롤 스무더 */
-const lenis = new Lenis({
-  duration: 1.2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  smooth: true,
-  smoothTouch: true
-})
-// Lenis 초기화
-// const lenis = new Lenis({
-//   duration: 1.2,
-//   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-//   smooth: true,
-//   smoothTouch: true
-// });
+/* Lenis + ScrollTrigger 연결 */
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && typeof Lenis !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
 
-// Lenis + GSAP 연동
-lenis.on('scroll', ScrollTrigger.update);
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smooth: true,
+      smoothTouch: true,
+    });
 
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  } else {
+    console.warn("Lenis 또는 GSAP ScrollTrigger가 로드되지 않았습니다.");
+  }
 });
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-requestAnimationFrame(raf)
 
 /* header opacity */
 $(window).on('scroll', () => {
