@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/* main */
+.project-txt span {
+  color: #ffed9c;
+}
+
+/* overview */
+.info .overview .role li:after {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 20px;
+  transform: translateY(-230%);
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* process */
+.process dl:after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 3px;
+  width: 1px;
+  height: 185%;
+  background: #fff;
+}
+
+.process dl:last-child:after {
+  height: 90%;
+}
+
+/* result */
+.result p span {
+  color: #ffed9c;
+  font-weight: 500;
+}
+
+/* link */
+.link img {
+  object-position: 50% 20%;
+}

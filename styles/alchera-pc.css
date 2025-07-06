@@ -1,3 +1,78 @@
 @charset "utf-8";
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+
+  .project-info li:last-child {
+    width: 250px;
+  }
+
+  .info .goals img {
+    height: 450px;
+  }
+
+  /* process */
+  .process {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .process dl dt {
+    text-align: center;
+  }
+
+  .process dl dt br {
+    display: block;
+  }
+
+  .process dl:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -11px;
+    height: 1px;
+    width: 500%;
+    background: #fff;
+  }
+
+  .process dl:last-of-type dt:after {
+    width: 0;
+    height: 0;
+  }
+
+  .process dl:nth-of-type(5):after {
+    height: 1px;
+    width: 300%;
+  }
+
+  .process dl:nth-of-type(6):after {
+    height: 1px;
+    left: 0;
+    width: 300%;
+  }
+
+  .process dl:nth-of-type(7):after {
+    height: 1px;
+    width: 350%;
+  }
+
+  .process dl:nth-of-type(8):after {
+    height: 1px;
+    width: 150%;
+    left: -50%;
+  }
+
+    .process dl:nth-of-type(8) dt:after {
+    height: 6px;
+    width: 6px;
+  }
+
+  /* result */
+  .good ul {
+    height: 60px;
+    flex-wrap: wrap;
+  }
+
+
+}
