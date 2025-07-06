@@ -1,24 +1,7 @@
-## 2025 포트폴리오 작업 일지 (250327 - )
+## 2025 포트폴리오 작업 일지 (250327 - 250704)
 https://seohee423.github.io/2025_PORTFOLIO/
 
 ----
-
-# 목표
-
-
-# Main Color
-
-
-# Font
-
-
-# Publishing
-
-
-# Review
-
-
-# 작업일지
 
 ## 250704
 - vimeo에 목업 영상 업로드, html 파일에 첨부
