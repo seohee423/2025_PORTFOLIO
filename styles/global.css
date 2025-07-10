@@ -19,23 +19,9 @@ body {
 }
 
 /****** cursor ******/
-#cursorImage {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  pointer-events: none;
+.cursor-img {
   display: none;
-  z-index: 999;
 }
-
-.image-effect {
-  transition: filter 1s ease;
-}
-
-.image-effect.light {
-  filter: brightness(0) invert(0);
-}
-
 
 /****** loading page ******/
 .loader {
@@ -287,6 +273,29 @@ footer a img {
 
 /****** PC ******/
 @media (min-width: 1200px) {
+
+
+  /****** cursor ******/
+  .cursor-img {
+    display: block;
+  }
+
+  #cursorImage {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    display: none;
+    z-index: 999;
+  }
+
+  .image-effect {
+    transition: filter 1s ease;
+  }
+
+  .image-effect.light {
+    filter: brightness(0) invert(0);
+  }
 
   /****** header PC ******/
   header .header-nav {

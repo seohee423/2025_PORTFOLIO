@@ -2,6 +2,10 @@
 
 @media (min-width: 1200px) {
 
+  .works-main p br {
+    display: none;
+  }
+
   .project-info li:last-child {
     width: 250px;
   }

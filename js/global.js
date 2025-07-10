@@ -56,30 +56,71 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Lenis + ScrollTrigger 연결 */
 document.addEventListener('DOMContentLoaded', () => {
-  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && typeof Lenis !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
+  let lenisInstance = null;
+  let rafId = null;
 
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smooth: true,
-      smoothTouch: true,
-    });
+  function initLenis() {
+    if (lenisInstance) return;
 
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && typeof Lenis !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+      lenisInstance = new Lenis({
+        duration: 1.2,
+        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+        smoothTouch: true,
+      });
+
+      lenisInstance.on('scroll', ScrollTrigger.update);
+
+      gsap.ticker.add(tickerUpdate);
+
+      function raf(time) {
+        lenisInstance.raf(time);
+        rafId = requestAnimationFrame(raf);
+      }
+      rafId = requestAnimationFrame(raf);
+
+      console.log('Lenis 활성화');
+    } else {
+      console.warn("Lenis/GSAP ScrollTrigger가 로드되지 않음");
     }
-
-    requestAnimationFrame(raf);
-  } else {
-    console.warn("Lenis 또는 GSAP ScrollTrigger가 로드되지 않았습니다.");
   }
+
+  function destroyLenis() {
+    if (!lenisInstance) return;
+
+    lenisInstance.destroy();
+    lenisInstance = null;
+
+    gsap.ticker.remove(tickerUpdate);
+    cancelAnimationFrame(rafId);
+    ScrollTrigger.kill();
+    console.log('Lenis 비활성화됨');
+  }
+
+  function tickerUpdate(time) {
+    if (lenisInstance) {
+      lenisInstance.raf(time * 1000);
+    }
+  }
+
+  function handleResize() {
+    if (window.innerWidth >= 1200) {
+      initLenis();
+    } else {
+      destroyLenis();
+    }
+  }
+
+  handleResize();
+
+  // 창 크기 변경 시 체크
+  window.addEventListener('resize', () => {
+    clearTimeout(window.__lenisResizeTimer__);
+    window.__lenisResizeTimer__ = setTimeout(handleResize, 150);
+  });
 });
 
 /* header opacity */
