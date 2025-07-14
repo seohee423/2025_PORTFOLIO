@@ -16,7 +16,8 @@ main {
 
 /* works-main */
 .works-main {
-  height: 810px;
+  /* height: 810px; */
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

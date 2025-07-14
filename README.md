@@ -3,6 +3,10 @@ https://seohee423.github.io/2025_PORTFOLIO/
 
 ----
 
+## 250714
+#### html
+- ALCHERA 프로젝트 상세페이지 리뷰 작성
+
 ## 250705
 #### html, css
 - ALCHERA 프로젝트 상세페이지 html 구조 작성, css 작업
